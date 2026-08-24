@@ -7,9 +7,6 @@ def t_test_one_sample(x: list, mu0: float) -> float:
     if sd == 0:
         if mean == mu0:
             return 0
-        else:
-            return np.inf
-       
-    
+        return np.inf
     t = (mean - mu0) / (sd/np.sqrt(len(x)))
     return float(t)
